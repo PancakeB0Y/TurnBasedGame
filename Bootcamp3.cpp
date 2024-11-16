@@ -1,7 +1,9 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 #include "Scene.hpp"
 #include "FPSCounter.hpp"
+#include "Button.hpp"
 
 int main() {
     sf::Font font;
@@ -16,7 +18,14 @@ int main() {
     GenericLabel label3(scene, "label3", font, "label3", 24, sf::Color::Cyan, sf::Vector2f(0, 72));
     label3.setParent(&label2);
 
-    while (window.isOpen()) {
+    Button testButton(scene, "testButton", font, "Click Me", sf::Vector2f(20, 20), sf::Color::Red);
+
+    std::function<void()> printText;
+    printText = []() {std::cout << "button pressed";};
+
+    testButton.setButtonAction(printText);
+    
+    while (window.isOpen()) {   
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
