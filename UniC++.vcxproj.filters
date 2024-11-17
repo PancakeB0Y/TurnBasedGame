@@ -48,6 +48,9 @@
     <ClCompile Include="SpriteObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RectangleObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FPSCounter.hpp">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SpriteObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleObject.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

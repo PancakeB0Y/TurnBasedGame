@@ -11,6 +11,11 @@ GenericLabel::GenericLabel(Scene& parentScene, std::string identifier, sf::Font&
 
 sf::Text GenericLabel::getText() const { return this->text; }
 
+void GenericLabel::setText(std::string text)
+{
+	this->text.setString(text);
+}
+
 void GenericLabel::update(){ }
 
 void GenericLabel::render()

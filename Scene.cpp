@@ -4,6 +4,13 @@ Scene::Scene(std::string identifier, sf::RenderWindow& window) : identifier(iden
 
 Scene::~Scene(){}
 
+void Scene::handleEvent(const sf::Event& event) {
+	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)
+	{
+		listOfGameObjects[i]->handleEvent(event);
+	}
+}
+
 void Scene::update()
 {
 	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)

@@ -18,6 +18,7 @@ class GenericLabel : public GameObject
 		virtual void render() override;
 
 		sf::Text getText() const;
+		void setText(std::string text);
 		virtual void setPosition(const sf::Vector2f position) override;
 
 };

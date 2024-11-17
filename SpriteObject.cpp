@@ -20,6 +20,10 @@ std::string SpriteObject::getSpriteFile() const {
 	return this->spriteFile;
 }
 
+sf::Sprite SpriteObject::getSprite() const {
+	return this->sprite;
+}
+
 void SpriteObject::setPosition(const sf::Vector2f position) {
 	this->position = position;
 	sprite.setPosition(position);

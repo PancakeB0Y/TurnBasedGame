@@ -17,6 +17,7 @@ class SpriteObject : public GameObject{
 		void render() override;
 
 		std::string getSpriteFile() const;
+		sf::Sprite getSprite() const;
 
 		void setPosition(const sf::Vector2f position);
 		void setPosition(const float x, const float y);

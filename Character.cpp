@@ -84,7 +84,7 @@ bool Character::isDead() {
 
 int Character::attackOpponent(Character& opponent) {
     if (isDead()) {
-        return 1;
+        return 0;
     }
 
     int opponentHealth = opponent.getHealth();

@@ -17,8 +17,9 @@ class Scene
 		Scene(std::string identifier, sf::RenderWindow& window);
 		virtual ~Scene();
 
-		virtual void update();
-		virtual void render();
+		void handleEvent(const sf::Event& event);
+		void update();
+		void render();
 		std::string getIdentifier() const;
 
 		

@@ -19,6 +19,7 @@ class GameObject
 		GameObject(Scene& parentScene, std::string identifier, sf::Vector2f position = sf::Vector2f(0, 0), GameObject* parent = NULL);
 		virtual ~GameObject();
 
+		virtual void handleEvent(const sf::Event& event) {};
 		virtual void update() = 0;
 		virtual void render() = 0;
 
