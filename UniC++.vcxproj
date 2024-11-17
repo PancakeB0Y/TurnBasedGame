@@ -142,6 +142,7 @@
     <ClCompile Include="GenericLabel.cpp" />
     <ClCompile Include="RestartProgram.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SpriteObject.cpp" />
     <ClCompile Include="UniC++.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="GenericLabel.hpp" />
     <ClInclude Include="RestartProgram.hpp" />
     <ClInclude Include="Scene.hpp" />
+    <ClInclude Include="SpriteObject.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

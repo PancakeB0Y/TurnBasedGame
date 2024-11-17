@@ -11,7 +11,7 @@ class GameObject
 		sf::Vector2f position;
 		GameObject* parent;
 		Scene& parentScene;
-		sf::RenderWindow& window;
+		sf::RenderWindow &window;
 
 		std::vector<GameObject*> listOfChildren;
 		

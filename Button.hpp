@@ -18,7 +18,7 @@ class Button : public GameObject
 		std::function<void()> action;
 
 	public:
-		Button(Scene& parentScene, std::string identifier, sf::Font& font, std::string buttonText = "", sf::Vector2f size = sf::Vector2f(0, 0), sf::Color color = sf::Color::White);
+		Button(Scene& parentScene, std::string identifier, sf::Font& font, std::string buttonText = "", sf::Vector2f size = sf::Vector2f(0, 0), int characterSize = 24, sf::Color color = sf::Color::White, sf::Color textColor = sf::Color::Black);
 		~Button();
 
 		bool isClicked();
@@ -26,8 +26,11 @@ class Button : public GameObject
 		void update() override;
 		void render() override;
 
-		void setButtonAction(std::function<void()> action);
+		sf::RectangleShape getShape() const;
+
+		void setButtonAction(const std::function<void()> action);
 		void setCharacterSize(const int size);
+		void setPosition(const int x, const int y);
 		void setPosition(const sf::Vector2f position);
 };
 

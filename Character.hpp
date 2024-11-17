@@ -4,6 +4,8 @@
 
 class Character {
     private:
+        std::string name;
+        std::string spriteFile;
         int health;
         int attack;
         int defense;
@@ -13,38 +15,25 @@ class Character {
         std::string* inventory;
 
     public:
-        Character(int health = 1, int attack = 1, int defense = 0, int agility = 0, int inventorySize = 3);
+        Character(std::string name, std::string spriteFile, int health = 1, int attack = 1, int defense = 0, int agility = 0, int inventorySize = 3);
 
         ~Character();
 
         void setStats(int health, int attack, int defense, int agility);
 
-        // Health getter
-        int getHealth() const;
-
         // Stat getter and setters
-        // Health setter
-        void setHealth(const int newHealth);
-
-        // Attack getter
+        int getHealth() const;
         int getAttack() const;
-
-        // Attack setter
-        void setAttack(const int newAttack);
-
-        // Defense getter
         int getDefense() const;
-
-        // Defense setter
-        void setDefense(const int newDefense);
-
-        // Agility getter
         int getAgility() const;
+        std::string getName() const;
+        std::string getSpriteFile() const;
 
-        // Agility setter
+        void setHealth(const int newHealth);
+        void setAttack(const int newAttack);
+        void setDefense(const int newDefense);
         void setAgility(const int newAgility);
 
-        //Add item to inventory
         void addItem(std::string item);
 
         //Returns the item at the specified index

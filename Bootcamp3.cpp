@@ -2,29 +2,46 @@
 #include <iostream>
 
 #include "Scene.hpp"
-#include "FPSCounter.hpp"
+#include "GenericLabel.hpp"
 #include "Button.hpp"
+#include "Character.hpp"
+#include "SpriteObject.hpp"
 
 int main() {
     sf::Font font;
     font.loadFromFile("assets/fonts/Roboto-Regular.ttf");
 
     sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
-    Scene scene("scene01", window);
+    Scene *curScene;
 
-    GenericLabel label1(scene, "label1", font, "label1", 24, sf::Color::Green, sf::Vector2f(0, 24));
-    GenericLabel label2(scene, "label2", font, "label2", 24, sf::Color::Red, sf::Vector2f(0, 48));
-    label2.setParent(&label1);
-    GenericLabel label3(scene, "label3", font, "label3", 24, sf::Color::Cyan, sf::Vector2f(0, 72));
-    label3.setParent(&label2);
+    Scene startScene("scene01", window);
 
-    Button testButton(scene, "testButton", font, "Click Me", sf::Vector2f(20, 20), sf::Color::Red);
+    Scene gameScene("scene02", window);
 
-    std::function<void()> printText;
-    printText = []() {std::cout << "button pressed";};
+    //Start scene objects
+    Button startButton(startScene, "startButton", font, "Start", sf::Vector2f(100, 50));
+    startButton.setCharacterSize(20);
+    const sf::Vector2f &buttonSize = startButton.getShape().getLocalBounds().getSize();
+    startButton.setPosition(window.getView().getCenter() - sf::Vector2f(buttonSize.x / 2, buttonSize.y / 2));
 
-    testButton.setButtonAction(printText);
+    std::function<void()> changeScene;
+    changeScene = [&curScene, &gameScene, &startScene]() {
+        curScene = &gameScene;
+     };
+
+    startButton.setButtonAction(changeScene);
     
+    //Game scene objects
+    GenericLabel labelGame(gameScene, "label1", font, "The Mighty Player", 24, sf::Color::White, sf::Vector2f(0, 24));
+    
+    Character player("player", "assets/images/el-gato.png");
+    SpriteObject characterAvatar(gameScene, "playerSprite", player.getSpriteFile());
+    characterAvatar.setPosition(window.getView().getCenter());
+    characterAvatar.setScale(0.5f, 0.5f);
+
+    //curScene = &startScene;
+    curScene = &gameScene;
+
     while (window.isOpen()) {   
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -33,8 +50,12 @@ int main() {
         }
 
         window.clear();
-        scene.update();
-        scene.render();
+
+        if (curScene != NULL) {
+            curScene->update();
+            curScene->render();
+        }
+
         window.display();
     }
 

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Font.hpp>
 
@@ -19,7 +18,7 @@ class GenericLabel : public GameObject
 		virtual void render() override;
 
 		sf::Text getText() const;
-		virtual void setPosition(sf::Vector2f position) override;
+		virtual void setPosition(const sf::Vector2f position) override;
 
 };
 

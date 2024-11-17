@@ -1,11 +1,7 @@
 #include "Character.hpp"
 
-Character::Character(int health, int attack, int defense, int agility, int inventorySize) {
-    this->health = health;
-    this->attack = attack;
-    this->defense = defense;
-    this->agility = agility;
-    this->inventorySize = inventorySize;
+Character::Character(std::string name, std::string spriteFile, int health, int attack, int defense, int agility, int inventorySize)
+    : name(name), spriteFile(spriteFile), health(health), attack(attack), defense(defense), agility(agility), inventorySize(inventorySize) {
 
     inventory = new std::string[inventorySize];
 }
@@ -22,28 +18,16 @@ void Character::setStats(int health, int attack, int defense, int agility) {
 }
 
 // Stat getter and setters
-// Health getter
 int Character::getHealth() const { return this->health; }
-
-// Health setter
-void Character::setHealth(const int newHealth) { this->health = newHealth; }
-
-// Attack getter
 int Character::getAttack() const { return this->attack; }
-
-// Attack setter
-void Character::setAttack(const int newAttack) { this->attack = newAttack; }
-
-// Defense getter
 int Character::getDefense() const { return this->defense; }
-
-// Defense setter
-void Character::setDefense(const int newDefense) { this->defense = newDefense; }
-
-// Agility getter
 int Character::getAgility() const { return this->agility; }
+std::string Character::getName() const { return this->name; }
+std::string Character::getSpriteFile() const { return this->spriteFile; }
 
-// Agility setter
+void Character::setHealth(const int newHealth) { this->health = newHealth; }
+void Character::setAttack(const int newAttack) { this->attack = newAttack; }
+void Character::setDefense(const int newDefense) { this->defense = newDefense; }
 void Character::setAgility(const int newAgility) { this->agility = newAgility; }
 
 //Add item to inventory
