@@ -90,7 +90,7 @@ int Character::attackOpponent(Character& opponent) {
     int opponentHealth = opponent.getHealth();
 
     // Calculate attack damage
-    int damageValue = this->attack - opponent.getDefense();
+    int damageValue = this->attack - (rand() % (opponent.getDefense() + 1));
     if (damageValue < 0) {
         damageValue = 0;
     }
@@ -101,7 +101,7 @@ int Character::attackOpponent(Character& opponent) {
 }
 
 int Character::heal() {
-    int healAmount = rand() % (defense + 1);
+    int healAmount = rand() % (this->agility + 1);
     this->health += healAmount;
 
     return healAmount;

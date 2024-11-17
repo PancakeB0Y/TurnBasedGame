@@ -3,7 +3,7 @@
 
 SpriteObject::SpriteObject(Scene& parentScene, std::string identifier, std::string spriteFile) : GameObject(parentScene, identifier), spriteFile(spriteFile){
 	if (!texture.loadFromFile(spriteFile)) {
-		std::cout << "Failed to load texture of sprite object \"" + identifier + "\"";
+		std::cout << "Failed to load texture from \"" + spriteFile + "\"";
 	}
 	sprite.setTexture(texture);
 	sprite.setOrigin(sf::Vector2f(sprite.getGlobalBounds().width / 2, sprite.getGlobalBounds().height / 2));
@@ -22,6 +22,14 @@ std::string SpriteObject::getSpriteFile() const {
 
 sf::Sprite SpriteObject::getSprite() const {
 	return this->sprite;
+}
+
+void SpriteObject::setTexture(const std::string spriteFile)
+{
+	if (!this->texture.loadFromFile(spriteFile)) {
+		std::cout << "Failed to load texture from \"" + spriteFile + "\"";
+	}
+	this->sprite.setTexture(texture);
 }
 
 void SpriteObject::setPosition(const sf::Vector2f position) {

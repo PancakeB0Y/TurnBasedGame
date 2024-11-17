@@ -19,6 +19,7 @@ class SpriteObject : public GameObject{
 		std::string getSpriteFile() const;
 		sf::Sprite getSprite() const;
 
+		void setTexture(const std::string spriteFile);
 		void setPosition(const sf::Vector2f position);
 		void setPosition(const float x, const float y);
 		void setScale(const sf::Vector2f scale);
