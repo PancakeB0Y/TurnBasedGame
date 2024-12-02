@@ -133,8 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bootcamp2.cpp" />
-    <ClCompile Include="Bootcamp3.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="FPSCounter.cpp" />

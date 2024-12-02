@@ -18,16 +18,13 @@
     <ClCompile Include="UniC++.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bootcamp2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RestartProgram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bootcamp3.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FPSCounter.cpp">
