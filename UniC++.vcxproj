@@ -133,28 +133,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="Character.cpp" />
-    <ClCompile Include="FPSCounter.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GenericLabel.cpp" />
-    <ClCompile Include="RectangleObject.cpp" />
-    <ClCompile Include="RestartProgram.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SpriteObject.cpp" />
-    <ClCompile Include="UniC++.cpp" />
+    <ClCompile Include="code\Main.cpp" />
+    <ClCompile Include="code\Button.cpp" />
+    <ClCompile Include="code\Character.cpp" />
+    <ClCompile Include="code\FPSCounter.cpp" />
+    <ClCompile Include="code\GameObject.cpp" />
+    <ClCompile Include="code\GenericLabel.cpp" />
+    <ClCompile Include="code\RectangleObject.cpp" />
+    <ClCompile Include="code\RestartProgram.cpp" />
+    <ClCompile Include="code\Scene.cpp" />
+    <ClCompile Include="code\SpriteObject.cpp" />
+    <ClCompile Include="code\UniC++.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Button.hpp" />
-    <ClInclude Include="Character.hpp" />
-    <ClInclude Include="FPSCounter.hpp" />
-    <ClInclude Include="GameObject.hpp" />
-    <ClInclude Include="GenericLabel.hpp" />
-    <ClInclude Include="RectangleObject.hpp" />
-    <ClInclude Include="RestartProgram.hpp" />
-    <ClInclude Include="Scene.hpp" />
-    <ClInclude Include="SpriteObject.hpp" />
+    <ClInclude Include="code\Button.hpp" />
+    <ClInclude Include="code\Character.hpp" />
+    <ClInclude Include="code\FPSCounter.hpp" />
+    <ClInclude Include="code\GameObject.hpp" />
+    <ClInclude Include="code\GenericLabel.hpp" />
+    <ClInclude Include="code\RectangleObject.hpp" />
+    <ClInclude Include="code\RestartProgram.hpp" />
+    <ClInclude Include="code\Scene.hpp" />
+    <ClInclude Include="code\SpriteObject.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

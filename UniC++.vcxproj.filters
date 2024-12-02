@@ -15,66 +15,66 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UniC++.cpp">
+    <ClCompile Include="code\UniC++.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RestartProgram.cpp">
+    <ClCompile Include="code\RestartProgram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Character.cpp">
+    <ClCompile Include="code\Character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="code\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FPSCounter.cpp">
+    <ClCompile Include="code\FPSCounter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GenericLabel.cpp">
+    <ClCompile Include="code\GenericLabel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
+    <ClCompile Include="code\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
+    <ClCompile Include="code\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
+    <ClCompile Include="code\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteObject.cpp">
+    <ClCompile Include="code\SpriteObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RectangleObject.cpp">
+    <ClCompile Include="code\RectangleObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FPSCounter.hpp">
+    <ClInclude Include="code\FPSCounter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GenericLabel.hpp">
+    <ClInclude Include="code\GenericLabel.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Character.hpp">
+    <ClInclude Include="code\Character.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RestartProgram.hpp">
+    <ClInclude Include="code\RestartProgram.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.hpp">
+    <ClInclude Include="code\Scene.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.hpp">
+    <ClInclude Include="code\GameObject.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Button.hpp">
+    <ClInclude Include="code\Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SpriteObject.hpp">
+    <ClInclude Include="code\SpriteObject.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RectangleObject.hpp">
+    <ClInclude Include="code\RectangleObject.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
