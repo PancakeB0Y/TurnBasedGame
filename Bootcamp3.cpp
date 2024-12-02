@@ -124,7 +124,9 @@ void resetGameState(Character &player, GenericLabel &playerName, SpriteObject &p
     score = 0;
 }
 
-void updateScoresFile(std::vector<int> &scores) {
+//Order scores in scores file in descending order
+//Fill the scores vector with all the scores
+void orderScoresFile(std::vector<int> &scores) {
     scores.clear();
     std::ifstream scoresFileRead("scores.cmgt");
     std::string line;
@@ -143,6 +145,7 @@ void updateScoresFile(std::vector<int> &scores) {
     scoresFileWrite.close();
 }
 
+//Display the first five scores
 void updateScoresTable(GenericLabel& highscores, std::vector<int>& scores) {
     highscores.setText("");
     for (unsigned i = 0; i < 5; i++) {
@@ -150,6 +153,7 @@ void updateScoresTable(GenericLabel& highscores, std::vector<int>& scores) {
     }
 }
 
+//Fill the scores file with five 0's
 void emptyScoresFile() {
     std::ofstream scoresFileWrite("scores.cmgt");
     for (unsigned int i = 0; i < 5; i++) {
@@ -187,7 +191,7 @@ int main() {
 
     std::vector<int> scores;
 
-    updateScoresFile(scores);
+    orderScoresFile(scores);
 
     if (scores.size() < 5) {
         std::ofstream scoresFileWrite("scores.cmgt");
@@ -203,13 +207,13 @@ int main() {
         scoresFileWrite.close();
     }
 
-    updateScoresFile(scores);
+    orderScoresFile(scores);
    
     updateScoresTable(highscores, scores);
 
     std::function<void()> eraseData = [&scores, &highscores]() {
         emptyScoresFile();
-
+        orderScoresFile(scores);
         updateScoresTable(highscores, scores);
     };
     eraseDataButton.setButtonAction(eraseData);
@@ -289,7 +293,7 @@ int main() {
         curScene = &startScene;
 
         if (isGameOver) {
-            updateScoresFile(scores);
+            orderScoresFile(scores);
             updateScoresTable(highscores, scores);
         }
     };
@@ -322,8 +326,8 @@ int main() {
     curScene = &startScene;
     //curScene = &gameScene;
 
-    sf::Event event;
     while (window.isOpen()) {   
+        sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
                 window.close();
